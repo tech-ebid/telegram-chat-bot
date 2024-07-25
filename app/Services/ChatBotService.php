@@ -14,7 +14,7 @@ class ChatBotService
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://api.telegram.org/" . self::$botToken . "/sendMessage?chat_id=$chat_id&text=$message",
+            CURLOPT_URL => "https://api.telegram.org/bot" . self::$botToken . "/sendMessage?chat_id=$chat_id&text=$message&parse_mode=HTML",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,

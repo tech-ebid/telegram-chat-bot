@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '../../vendor/autoload.php';
-
+date_default_timezone_set('Asia/Jakarta');
+set_time_limit(0);
 use App\Models\Task;
 use App\Services\TaskService;
 use App\Services\ChatBotService;
